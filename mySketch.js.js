@@ -963,6 +963,6 @@ function distToSegment(px, py, x1, y1, x2, y2) {
 }
 
 function setup() {
-  let canvas = createCanvas(620, 360);
+  let canvas = createCanvas(720, 360);
   canvas.parent("game-container");
 }
