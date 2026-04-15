@@ -108,7 +108,7 @@ var iEnemyX = 500, iEnemyDir = 5;
 
 // Setup
 function setup() {
-  createCanvas(800, 500);
+  createCanvas(720, 360);
   rectMode(CENTER);
   textAlign(CENTER);
 }
