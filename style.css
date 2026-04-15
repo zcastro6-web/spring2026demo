@@ -1,97 +1,113 @@
-body {
+/* RESET */
+* {
   margin: 0;
-  background: radial-gradient(circle at top, #1a1a1a, #0a0a0a);
-  color: #eaeaea;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  background-color: black;
+  color: white;
   font-family: 'Orbitron', sans-serif;
 }
 
+/* LAYOUT */
 .page-layout {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 40px;
   display: flex;
-  gap: 50px;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px;
+  gap: 40px;
 }
 
+/* MAIN CONTENT */
 .main-content {
   flex: 1;
+  max-width: 800px;
   text-align: center;
 }
 
 .title {
   font-size: 3rem;
-  letter-spacing: 2px;
   margin-bottom: 20px;
 }
 
+#game-container {
+  margin: 20px auto;
+}
+
+/* TEXT */
 .description {
-  max-width: 700px;
-  margin: 30px auto;
+  margin-top: 20px;
   line-height: 1.6;
   font-size: 1rem;
-  color: #bbb;
+  opacity: 0.9;
 }
 
 .credits {
   margin-top: 20px;
-  font-weight: 400;
-  color: #888;
+  font-size: 1.2rem;
+  opacity: 0.7;
 }
 
-#game-container {
-  display: flex;
-  justify-content: center;
-  margin: 40px 0;
-}
-
+/* SIDEBAR */
 .sidebar {
-  width: 320px;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 20px;
-  border-radius: 12px;
-  backdrop-filter: blur(10px);
+  width: 300px;
 }
 
 .sidebar h3 {
-  text-align: center;
   margin-bottom: 20px;
+  font-size: 1.2rem;
 }
 
+/* SECTION */
 .ref-section {
   margin-bottom: 25px;
 }
 
+.ref-section h4 {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+/* CARDS */
 .ref-card {
   display: block;
   text-decoration: none;
   color: white;
-  margin-bottom: 12px;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.ref-card:hover {
-  transform: scale(1.05);
-  opacity: 0.85;
+  margin-bottom: 10px;
 }
 
 .ref-card img {
   width: 100%;
   border-radius: 8px;
+  border: 2px solid white;
+  transition: 0.2s ease;
+}
+
+.ref-card:hover img {
+  transform: scale(1.05);
+  border-color: cyan;
 }
 
 .ref-card span {
   display: block;
   margin-top: 6px;
   font-size: 0.9rem;
-  color: #ccc;
+  text-align: center;
 }
 
-@media (max-width: 1100px) {
+/* MOBILE */
+@media (max-width: 900px) {
   .page-layout {
     flex-direction: column;
+    align-items: center;
   }
 
   .sidebar {
     width: 100%;
+    max-width: 300px;
   }
 }
