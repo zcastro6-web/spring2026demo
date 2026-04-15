@@ -106,9 +106,9 @@ var iDoorX = 750, iDoorY = 190, iDoorW = 70, iDoorH = 120;
 var iLaserAngle = 0;
 var iEnemyX = 500, iEnemyDir = 5;
 
-// Setup
 function setup() {
-  createCanvas(700, 400);
+  let cnv = createCanvas(600, 400);
+  cnv.parent("game-container");
   rectMode(CENTER);
   textAlign(CENTER);
 }
