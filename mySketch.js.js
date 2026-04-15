@@ -107,7 +107,7 @@ var iLaserAngle = 0;
 var iEnemyX = 500, iEnemyDir = 5;
 
 function setup() {
-  let cnv = createCanvas(600, 400);
+  let cnv = createCanvas(800, 400);
   cnv.parent("game-container");
   rectMode(CENTER);
   textAlign(CENTER);
