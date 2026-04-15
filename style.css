@@ -1,18 +1,15 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BODY */
 body {
   background-color: black;
   color: white;
   font-family: 'Orbitron', sans-serif;
 }
 
-/* LAYOUT */
 .page-layout {
   display: flex;
   justify-content: space-between;
@@ -21,7 +18,6 @@ body {
   gap: 40px;
 }
 
-/* MAIN CONTENT */
 .main-content {
   flex: 1;
   max-width: 800px;
@@ -37,7 +33,6 @@ body {
   margin: 20px auto;
 }
 
-/* TEXT */
 .description {
   margin-top: 20px;
   line-height: 1.6;
@@ -51,7 +46,6 @@ body {
   opacity: 0.7;
 }
 
-/* SIDEBAR */
 .sidebar {
   width: 300px;
 }
@@ -61,7 +55,6 @@ body {
   font-size: 1.2rem;
 }
 
-/* SECTION */
 .ref-section {
   margin-bottom: 25px;
 }
@@ -72,7 +65,6 @@ body {
   opacity: 0.8;
 }
 
-/* CARDS */
 .ref-card {
   display: block;
   text-decoration: none;
@@ -99,7 +91,6 @@ body {
   text-align: center;
 }
 
-/* MOBILE */
 @media (max-width: 900px) {
   .page-layout {
     flex-direction: column;
