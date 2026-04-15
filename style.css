@@ -8,96 +8,102 @@ body {
   background: black;
   color: white;
   font-family: 'Orbitron', sans-serif;
+  padding: 40px;
 }
 
 .page-layout {
+  max-width: 1400px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 30px;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 30px 20px;
+  gap: 50px;
 }
 
 .main-content {
   flex: 1;
-  max-width: 780px;
+  max-width: 850px;
   text-align: center;
 }
 
 .title {
-  font-size: 3.4rem;
+  font-size: 5rem;
   margin-bottom: 20px;
-}
-
-#game-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin: 20px 0 25px 0;
-  overflow: hidden;
-}
-
-#game-container canvas {
-  display: block;
-  max-width: 100% !important;
-  height: auto !important;
-  border: 2px solid white;
 }
 
 .description {
   font-size: 1rem;
-  line-height: 1.6;
-  max-width: 720px;
-  margin: 0 auto 18px auto;
+  line-height: 1.5;
+  max-width: 760px;
+  margin: 0 auto 20px auto;
 }
 
 .credits {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+}
+
+#game-container {
+  width: 600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#game-container canvas {
+  display: block;
+  width: 600px !important;
+  height: 400px !important;
+  max-width: none !important;
+  border: none;
+  margin: 0 auto;
+}
+
+.sidebar {
+  width: 320px;
+  flex-shrink: 0;
+}
+
+.sidebar h3 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.ref-section {
+  margin-bottom: 28px;
+}
+
+.ref-section h4 {
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
 
-.sidebar {
-  width: 290px;
-  flex: 0 0 290px;
-}
-
-.sidebar h3 {
-  font-size: 1.6rem;
-  margin-bottom: 22px;
-  text-align: center;
-}
-
-.ref-section {
-  margin-bottom: 26px;
-}
-
-.ref-section h4 {
-  font-size: 1rem;
-  margin-bottom: 10px;
-}
-
 .ref-card {
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
   color: white;
+  gap: 8px;
 }
 
 .ref-card img {
   width: 100%;
+  border: 3px solid white;
+  border-radius: 16px;
   display: block;
-  border: 2px solid white;
-  border-radius: 12px;
 }
 
 .ref-card span {
-  display: block;
   text-align: center;
-  margin-top: 10px;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   line-height: 1.3;
-  word-break: break-word;
+}
+
+a {
+  color: white;
 }
 
 @media (max-width: 1100px) {
@@ -106,23 +112,40 @@ body {
     align-items: center;
   }
 
-  .main-content {
+  .sidebar {
+    width: 600px;
     max-width: 100%;
   }
+}
 
-  .sidebar {
-    width: 100%;
-    max-width: 500px;
+@media (max-width: 700px) {
+  body {
+    padding: 20px;
   }
 
   .title {
     font-size: 3rem;
   }
-}
 
-canvas {
-  display: block;
-  margin: 0 auto;
-  width: auto !important;
-  height: auto !important;
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .credits {
+    font-size: 1.3rem;
+  }
+
+  #game-container {
+    width: 100%;
+  }
+
+  #game-container canvas {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 3 / 2;
+  }
+
+  .sidebar h3 {
+    font-size: 1.5rem;
+  }
 }
