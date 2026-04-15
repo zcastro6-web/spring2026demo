@@ -961,8 +961,3 @@ function distToSegment(px, py, x1, y1, x2, y2) {
 
   return dist(px, py, closestX, closestY);
 }
-
-function setup() {
-  let canvas = createCanvas(720, 360);
-  canvas.parent("game-container");
-}
