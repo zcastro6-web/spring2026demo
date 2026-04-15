@@ -1,32 +1,88 @@
 body {
   margin: 0;
-  background-color: #black;
+  background: black;
+  color: white;
   font-family: Arial, sans-serif;
+}
+
+.page-layout {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px;
   display: flex;
-  justify-content: center;
+  gap: 40px;
+  align-items: flex-start;
 }
 
-.container {
-  width: 100%;
-  max-width: 1000px;
-  padding: 30px 40px;
-  box-sizing: border-box;
-}
-
-h1,
-h2,
-p {
+.main-content {
+  flex: 1;
   text-align: center;
 }
 
-p {
-  max-width: 800px;
-  margin: 20px auto;
+.main-content p {
+  max-width: 850px;
+  margin: 24px auto;
   line-height: 1.6;
+  font-size: 1.1rem;
 }
 
 #game-container {
   display: flex;
   justify-content: center;
   margin: 30px 0;
+}
+
+.sidebar {
+  width: 320px;
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 20px;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.ref-section {
+  margin-bottom: 24px;
+}
+
+.ref-section h4 {
+  margin-bottom: 12px;
+}
+
+.ref-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-decoration: none;
+  color: black;
+  margin-bottom: 14px;
+}
+
+.ref-card img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.ref-card span {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 1100px) {
+  .page-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: static;
+  }
 }
