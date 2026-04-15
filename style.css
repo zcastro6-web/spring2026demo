@@ -1,17 +1,16 @@
 body {
   margin: 0;
-  background: #0f0f0f;
-  color: #f2f2f2;
-  font-family: Arial, sans-serif;
+  background: radial-gradient(circle at top, #1a1a1a, #0a0a0a);
+  color: #eaeaea;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .page-layout {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 30px;
+  padding: 40px;
   display: flex;
-  gap: 40px;
-  align-items: flex-start;
+  gap: 50px;
 }
 
 .main-content {
@@ -19,58 +18,72 @@ body {
   text-align: center;
 }
 
+.title {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.description {
+  max-width: 700px;
+  margin: 30px auto;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #bbb;
+}
+
+.credits {
+  margin-top: 20px;
+  font-weight: 400;
+  color: #888;
+}
+
 #game-container {
   display: flex;
   justify-content: center;
-  margin: 30px 0;
-}
-
-.main-content p {
-  max-width: 850px;
-  margin: 24px auto;
-  line-height: 1.6;
-  font-size: 1.1rem;
+  margin: 40px 0;
 }
 
 .sidebar {
   width: 320px;
-  background: #1a1a1a;
+  background: rgba(255, 255, 255, 0.05);
   padding: 20px;
-  border-radius: 14px;
-  box-sizing: border-box;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
 }
 
 .sidebar h3 {
-  margin-top: 0;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .ref-section {
-  margin-bottom: 24px;
-}
-
-.ref-section h4 {
-  margin-bottom: 12px;
+  margin-bottom: 25px;
 }
 
 .ref-card {
   display: block;
   text-decoration: none;
-  color: #f2f2f2;
-  margin-bottom: 14px;
+  color: white;
+  margin-bottom: 12px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.ref-card:hover {
+  transform: scale(1.05);
+  opacity: 0.85;
 }
 
 .ref-card img {
   width: 100%;
-  border-radius: 10px;
-  display: block;
-  background: #222;
+  border-radius: 8px;
 }
 
 .ref-card span {
   display: block;
-  margin-top: 8px;
-  line-height: 1.4;
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: #ccc;
 }
 
 @media (max-width: 1100px) {
