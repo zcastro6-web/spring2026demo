@@ -5,93 +5,99 @@
 }
 
 body {
-  background-color: black;
+  background: black;
   color: white;
   font-family: 'Orbitron', sans-serif;
 }
 
 .page-layout {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
-  padding: 40px;
   gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px 20px;
 }
 
 .main-content {
   flex: 1;
-  max-width: 800px;
+  max-width: 760px;
   text-align: center;
 }
 
 .title {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
-#game-container {
-  margin: 20px auto;
-}
-
-.description {
-  margin-top: 20px;
-  line-height: 1.6;
-  font-size: 1rem;
-  opacity: 0.9;
-}
-
-.credits {
-  margin-top: 20px;
-  font-size: 1.2rem;
-  opacity: 0.7;
-}
-
-.sidebar {
-  width: 300px;
-}
-
-.sidebar h3 {
-  margin-bottom: 20px;
-  font-size: 1.2rem;
-}
-
-.ref-section {
+  font-size: 3.6rem;
   margin-bottom: 25px;
 }
 
-.ref-section h4 {
-  margin-bottom: 10px;
+#game-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+#game-container canvas {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: 2px solid white;
+}
+
+.description {
   font-size: 1rem;
-  opacity: 0.8;
+  line-height: 1.6;
+  max-width: 720px;
+  margin: 0 auto 20px;
+}
+
+.credits {
+  font-size: 1.2rem;
+}
+
+.sidebar {
+  width: 320px;
+  flex-shrink: 0;
+}
+
+.sidebar h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.ref-section {
+  margin-bottom: 26px;
+}
+
+.ref-section h4 {
+  font-size: 1rem;
+  margin-bottom: 10px;
 }
 
 .ref-card {
   display: block;
   text-decoration: none;
   color: white;
-  margin-bottom: 10px;
 }
 
 .ref-card img {
   width: 100%;
-  border-radius: 8px;
+  display: block;
   border: 2px solid white;
-  transition: 0.2s ease;
-}
-
-.ref-card:hover img {
-  transform: scale(1.05);
-  border-color: cyan;
+  border-radius: 12px;
 }
 
 .ref-card span {
   display: block;
-  margin-top: 6px;
-  font-size: 0.9rem;
   text-align: center;
+  margin-top: 10px;
+  font-size: 0.95rem;
+  line-height: 1.3;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   .page-layout {
     flex-direction: column;
     align-items: center;
@@ -99,6 +105,14 @@ body {
 
   .sidebar {
     width: 100%;
-    max-width: 300px;
+    max-width: 500px;
+  }
+
+  .main-content {
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: 3rem;
   }
 }
