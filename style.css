@@ -14,7 +14,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 40px;
+  gap: 32px;
   max-width: 1400px;
   margin: 0 auto;
   padding: 30px 20px;
@@ -22,26 +22,28 @@ body {
 
 .main-content {
   flex: 1;
+  min-width: 0;
   max-width: 760px;
   text-align: center;
 }
 
-.title {
-  font-size: 3.6rem;
-  margin-bottom: 25px;
+.sidebar {
+  width: 280px;
+  flex: 0 0 280px;
 }
 
 #game-container {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 25px;
+  overflow: hidden;
+  margin-bottom: 24px;
 }
 
 #game-container canvas {
-  max-width: 100%;
-  height: auto;
   display: block;
+  max-width: 100% !important;
+  height: auto !important;
   border: 2px solid white;
 }
 
